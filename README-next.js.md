@@ -1,8 +1,15 @@
-# Next.js gh-pages Hello World example
+# gh-pages Hello World example
 
-This repository is a gh-pages example build with Next.js
+## How to use
 
-https://thierryc.github.io/Next-gh-page-example/
+### Download manually
+
+Download the example [or clone the repo](https://github.com/zeit/next.js):
+
+```bash
+curl https://codeload.github.com/zeit/next.js/tar.gz/master | tar -xz --strip=2 next.js-master/examples/gh-pages
+cd gh-pages
+```
 
 Install it and run:
 
@@ -44,7 +51,6 @@ https://github.com/thierryc/Next-gh-page-example/
 https://thierryc.github.io/Next-gh-page-example/
 
 ```
-
 
 ## The idea behind the example
 
