@@ -40,14 +40,16 @@ https://github-user-name.github.io/github-projet-name/
 You can add on to the deploy command to create the CNAME file for you. GitHub detects this file and automatically updates the custom domain setting. Edit the package.json deploy script and replace example.com with your custom domain. (Thank you to @jabacchetta)
 
 ```bash
-next build
-&& next export
-&& touch out/.nojekyll
+
+rm -rf node_modules/.cache 
+&& rimraf out 
+&& next build 
+&& next export 
+&& touch out/.nojekyll 
 && touch out/CNAME
 && echo \"example.com\" >> out/CNAME
-&& git add out/
-&& git commit -m \"Deploy to gh-pages\"
-&& git subtree push --prefix out origin gh-pages"
+&& gh-pages -d out
+
 ```
 
 Example:
